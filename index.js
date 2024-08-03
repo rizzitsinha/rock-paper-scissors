@@ -2,7 +2,7 @@
 function getComputerChoice(){
     let randomNumber = Math.floor(Math.random() * 3);
     let playableOptions = ['rock', 'paper', 'scissors'];
-    
+
     return playableOptions[randomNumber];
 }
 
@@ -13,3 +13,8 @@ function getHumanChoice(){
     
     return humanChoice;
 }
+
+// Creat two variables humanScore and computerScore and initialize the two to 0
+let humanScore = 0;
+let computerScore = 0;
+
