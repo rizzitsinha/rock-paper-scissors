@@ -24,12 +24,13 @@ function playRound(humanChoice, computerChoice){
     let humanWins;
     let winnerStatus;
     
+    // Create a function to decide which string to output
     function getWinnerStatus(humanWins) {
         if (humanWins === true){
-            winnerStatus = "You win!"
+            winnerStatus = "You won this round! "
         }
         else if (humanWins === false){
-            winnerStatus = "You lose!"
+            winnerStatus = "You lost this round! "
         }
         return winnerStatus
     }
@@ -39,7 +40,7 @@ function playRound(humanChoice, computerChoice){
     let paperWins = "Paper beats Rock"
     let scissorsWin = "Scissors beat Paper"
 
-    // Create a switch statement to find out and declare the winner
+    // Create a switch statement to find out and declare the winner, it rewards a point to the winner
     switch(humanChoice){
         case 'rock':
             if (computerChoice === 'scissors'){
@@ -103,7 +104,17 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-// Call the function
-while (true) {
+// Call the function 5 times to play the game
+for (let i = 1; i <= 5; i++) {
     playRound(getHumanChoice(), getComputerChoice());
+    // console.log(`Your score for round ${i}: ${humanScore}`);
+    // console.log(`The computer's score for round ${i}: ${computerScore}`);
 }
+
+// Announce the final result and declare the winner
+console.log(`Final Score:
+                   Your Score- ${humanScore}
+                   Computer's Score- ${computerScore}`)
+if (humanScore > computerScore){ console.log("You win!!!!") }
+else if (humanScore < computerScore){ console.log("You lose:(") }
+else { console.log("It's a tie") }
