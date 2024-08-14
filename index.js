@@ -1,3 +1,33 @@
+const rockBtn = document.querySelector("#rock")
+const paperBtn = document.querySelector("#paper")
+const scissorsBtn = document.querySelector("#scissors")
+const buttonsContainer = document.querySelector(".buttons-container")
+
+// Creat two variables humanScore and computerScore and initialize the two to 0
+let humanScore = 0;
+let computerScore = 0;
+let humanChoice;
+
+// // Initiate Game
+// buttonsContainer.addEventListener('click', (e) => {
+//     let target = e.target;
+//     switch(target.id){
+//         case 'rock':
+//             console.log("rock was clicked!");
+//             humanChoice = 'rock';
+//             break;
+//         case 'paper':
+//             console.log("paper was clicked!");
+//             humanChoice = 'paper';
+//             break;
+//         case 'scissors':
+//             console.log("scissors was clicked!");
+//             humanChoice = 'scissors';
+//             break;
+//     }
+// })
+
+
 // Create a funciton called getComputerChoice to generate a random choice for the computer to play, either rock, paper or scissors
 function getComputerChoice(){
     let randomNumber = Math.floor(Math.random() * 3);
@@ -13,10 +43,6 @@ function getHumanChoice(){
     
     return humanChoice;
 }
-
-// Creat two variables humanScore and computerScore and initialize the two to 0
-let humanScore = 0;
-let computerScore = 0;
 
 // Create a function called playRound to play a single round, decide and declare the winner
 function playRound(humanChoice, computerChoice){

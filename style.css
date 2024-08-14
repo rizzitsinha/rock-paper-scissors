@@ -67,3 +67,8 @@ img {
     justify-content: center;
 
 }
+
+button {
+    border-style: none;
+    background-color: inherit;
+}
