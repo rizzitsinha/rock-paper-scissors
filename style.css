@@ -72,3 +72,7 @@ button {
     border-style: none;
     background-color: inherit;
 }
+
+.score-board > p{
+    margin-right: 18px;
+}
