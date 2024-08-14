@@ -59,8 +59,7 @@ img {
     opacity: 0.7;
 }
 
-.score-board {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.score-board, #refresh {
     font-size: 3rem;
     display: flex;
     margin-top: 80px;
@@ -75,4 +74,11 @@ button {
 
 .score-board > p{
     margin-right: 18px;
+}
+
+.invisible {
+    opacity: 0;
+    z-index: 10;
+    margin-top: -50px;
+
 }

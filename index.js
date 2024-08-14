@@ -3,6 +3,8 @@ const paperBtn = document.querySelector("#paper")
 const scissorsBtn = document.querySelector("#scissors")
 const buttonsContainer = document.querySelector(".buttons-container")
 const currentScore = document.querySelector("#score");
+const scoreBoard = document.querySelector(".score-board")
+const refreshPrompt = document.querySelector("#refresh")
 
 // Creat two variables humanScore and computerScore and initialize the two to 0
 let humanScore = 0;
@@ -16,24 +18,29 @@ buttonsContainer.addEventListener('click', (e) => {
         case 'rock':
             console.log("rock was clicked!");
             humanChoice = 'rock';
-            playRound(humanChoice, getComputerChoice());
-            currentScore.textContent = `${humanScore} - ${computerScore}`
-
             break;
+
         case 'paper':
             console.log("paper was clicked!");
             humanChoice = 'paper';
-            playRound(humanChoice, getComputerChoice());
-            currentScore.textContent = `${humanScore} - ${computerScore}`
-
             break;
+
         case 'scissors':
             console.log("scissors was clicked!");
             humanChoice = 'scissors';
-            playRound(humanChoice, getComputerChoice());
-            currentScore.textContent = `${humanScore} - ${computerScore}`
-
             break;
+    }
+
+    playRound(humanChoice, getComputerChoice());
+    currentScore.textContent = `${humanScore} - ${computerScore}`
+
+    if(humanScore === 5 || computerScore === 5){
+        (humanScore > computerScore) ? currentScore.textContent = "You win!" : currentScore.textContent = "You lose!"
+    }
+    else if(humanScore > 5 || computerScore > 5){
+        scoreBoard.classList.add("invisible")
+        refreshPrompt.classList.remove("invisible")
+        
     }
 })
 
