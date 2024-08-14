@@ -1,0 +1,69 @@
+* {
+    font-family: 'Lucida', monospace;
+    margin: 0;
+    padding: 0%;
+}
+
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+} 
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: #6C946F;
+    padding: 30px;
+    font-size: 4rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+body {
+    background-color: #FFD35A;
+}
+
+img {
+    height: 200px;
+    width: auto;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 180px;
+    justify-content: center;
+
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.button img {
+    margin-top: 100px;
+}
+
+.button img:hover {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.clicked {
+    opacity: 0.7;
+}
+
+.score-board {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+
+}
