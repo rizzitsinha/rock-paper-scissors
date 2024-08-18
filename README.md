@@ -6,5 +6,5 @@ It generates a random choice for the computer, gets an input from the usesr for 
 The game is played until either the user or the computer gains 5 points. Finally, the scores are announced and the winner is declared.  
 
 ## Visit the Website
-You can check out the game [here](https://rizzitsinha.github.io/rock-paper-scissors/). Make sure to open the console!
+You can check out the game [here](https://rizzitsinha.github.io/rock-paper-scissors/). 
 
